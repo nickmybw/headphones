@@ -1,0 +1,317 @@
+/* universal selector is not key */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source sans pro";
+}
+
+.header {
+  min-height: 100vh;
+  width: auto;
+  background-image: url("images/headphones_hero_1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f12020;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.textbox {
+  width: 70%;
+  color: #ffff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Source sans pro";
+  font-weight: 700;
+}
+
+.textbox h1 {
+  font-size: 50px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.textbox p {
+  margin: 10px 0 40px;
+  font-size: 16px;
+  color: #ffff;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  border: 1px solid #ffff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid #d22929;
+  background: #d22929;
+  transition: 0.5s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .textbox h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background-color: #3c3c3c;
+    opacity: 0.9;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -50px;
+    text-align: center;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .fa {
+    display: block;
+    color: #ffff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+/* Side Navigation */
+.nav-links {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li {
+  padding: 15px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links .close-icon {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.open {
+  width: 100%;
+}
+
+/*---What we do…”---*/
+
+.what-we-do {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px 20px;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.what-we-do h1 {
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.first-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: flex-end;
+  gap: 150px;
+  width: 90%;
+}
+
+.sound {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  padding: 0px 0;
+  width: 50px;
+  margin-right: 0.8px;
+  column-gap: 30px;
+}
+
+.sound h1 {
+  text-align: center;
+}
+
+.sound > p {
+  text-align: start;
+  letter-spacing: 0;
+  min-height: 32px;
+  line-height: 26px;
+  margin-top: 15px;
+  width: 180px;
+  font-size: smaller;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  padding: 0px 0;
+  width: 50px;
+  margin-right: 0.8px;
+  column-gap: 30px;
+}
+
+.video h2 {
+  text-align: center;
+}
+
+.video > p {
+  text-align: start;
+  letter-spacing: 0;
+  min-height: 32px;
+  line-height: 26px;
+  margin-top: 15px;
+  width: 180px;
+  font-size: smaller;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  padding: 0px 0;
+  width: 50px;
+  margin-right: 0.8px;
+  column-gap: 30px;
+}
+
+.music h3 {
+  text-align: center;
+}
+
+.music > p {
+  text-align: start;
+  letter-spacing: 0;
+  min-height: 32px;
+  line-height: 26px;
+  margin-top: 15px;
+  width: 180px;
+  font-size: smaller;
+}
+
+.hearing {
+  display: flex;
+  flex-direction: column;
+  height: 65px;
+  padding: 0px 0;
+  width: 50px;
+  margin-right: 0.8px;
+  column-gap: 30px;
+}
+
+.hearing h4 {
+  text-align: center;
+}
+
+.hearing > p {
+  text-align: start;
+  letter-spacing: 0;
+  min-height: 32px;
+  line-height: 26px;
+  margin-top: 15px;
+  width: 180px;
+  font-size: smaller;
+}
+
+
+
+
+
+
+
+
+
